@@ -1,0 +1,870 @@
+GET /api/auth
+  Status Code: 404
+  Response Time: 2.072 ms
+GET /api/auth
+  Status Code: 404
+  Response Time: 0.632 ms
+GET /api/auth
+  Status Code: 404
+  Response Time: 0.468 ms
+GET /api/auth
+  Status Code: 404
+  Response Time: 0.261 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 17.662 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 9.198 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 2.648 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 6.134 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 3.237 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 2.170 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 10.978 ms
+POST /api/auth/login
+  Status Code: -
+  Response Time: - ms
+POST /api/auth/login
+  Status Code: 500
+  Response Time: 11.920 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 37.884 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 9.322 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 40.385 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 45.808 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 46.192 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 29.195 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 3.593 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 9.268 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 11.191 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 48.323 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 101.681 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 34.486 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 41.952 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 69.983 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 68.536 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 37.216 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 49.560 ms
+POST /api/auth/login
+  Status Code: 404
+  Response Time: 22.943 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 4.266 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 131.245 ms
+POST /api/auth/login
+  Status Code: 404
+  Response Time: 4.476 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 91.191 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 96.612 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 110.064 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 114.776 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 90.014 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 85.442 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 87.799 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 85.278 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 89.228 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 101.369 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 147.042 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 14.117 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 130.261 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 3.361 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 278.373 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 3.301 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 4.619 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 8.832 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 24.333 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 9.824 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 31.550 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 30.968 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 29.197 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 34.744 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 41.155 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 19.105 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 7.178 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 2.468 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 11.275 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 9.995 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 130.864 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 204
+  Response Time: 6.623 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 141.940 ms
+DELETE /api/auth/deleteAccount
+  Status Code: -
+  Response Time: - ms
+DELETE /api/auth/deleteAccount
+  Status Code: 500
+  Response Time: 28.119 ms
+DELETE /api/auth/deleteAccount
+  Status Code: 403
+  Response Time: 52.791 ms
+DELETE /api/auth/deleteAccount?email=badraan@mail.com&password=mypwdsuiiiii
+  Status Code: 500
+  Response Time: 99.519 ms
+DELETE /api/auth/deleteAccount?email=badraan@mail.com&password=mypwdsuiiiii
+  Status Code: 204
+  Response Time: 126.019 ms
+DELETE /api/auth/deleteAccount?email=badraan@mail.com&password=mypwdsuiiiii
+  Status Code: 500
+  Response Time: 8.530 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 128.733 ms
+DELETE /api/auth/deleteAccount?email=badraan@mail.com&password=mypwdsuiiiii
+  Status Code: 400
+  Response Time: 7.619 ms
+DELETE /api/auth/logout
+  Status Code: 204
+  Response Time: 12.264 ms
+DELETE /api/auth/logout
+  Status Code: 204
+  Response Time: 1.266 ms
+DELETE /api/auth/logoutAll
+  Status Code: 400
+  Response Time: 10.824 ms
+DELETE /api/auth/logoutAll
+  Status Code: 400
+  Response Time: 11.259 ms
+DELETE /api/auth/logoutAll
+  Status Code: 400
+  Response Time: 12.139 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 236.609 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 235.211 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 94.336 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 5.502 ms
+DELETE /api/auth/logoutAll
+  Status Code: 204
+  Response Time: 14.695 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 12.038 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 3.705 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 21.014 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 1.585 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 17.489 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 13.965 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 2.403 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 1.785 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 1.149 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 2.675 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 19.735 ms
+POST /api/auth/forgotPassword
+  Status Code: 500
+  Response Time: 33.390 ms
+POST /api/auth/forgotPassword
+  Status Code: 500
+  Response Time: 8.665 ms
+POST /api/auth/register
+  Status Code: 200
+  Response Time: 191.626 ms
+POST /api/auth/forgotPassword
+  Status Code: 500
+  Response Time: 16.248 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2107.390 ms
+POST /api/auth/sendOTP
+  Status Code: 200
+  Response Time: 1667.347 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 1.512 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 2.115 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 32.306 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 22.034 ms
+POST /api/auth/sendOTP
+  Status Code: 200
+  Response Time: 1626.322 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 9.614 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 31.699 ms
+POST /api/auth/sendOTP
+  Status Code: 400
+  Response Time: 11.532 ms
+POST /api/auth/sendOTP
+  Status Code: 500
+  Response Time: 26.651 ms
+POST /api/auth/sendOTP
+  Status Code: 400
+  Response Time: 12.884 ms
+POST /api/auth/sendOTP
+  Status Code: 404
+  Response Time: 26.924 ms
+POST /api/auth/sendOTP
+  Status Code: 400
+  Response Time: 13.296 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 1550.608 ms
+POST /api/auth/forgotPassword
+  Status Code: 500
+  Response Time: 9.410 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 142.555 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 47.022 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 95.359 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2882.481 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 113.302 ms
+POST /api/auth/forgotPassword
+  Status Code: 500
+  Response Time: 36.071 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2417.189 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2380.052 ms
+GET /reset-password?token=1f0a5b5cf259e91c5510be7e9c1a50b4ca66c8ce01c46c88ef3c845f047b2bae
+  Status Code: 404
+  Response Time: 1.315 ms
+GET /favicon.ico
+  Status Code: 404
+  Response Time: 0.861 ms
+GET /reset-password?token=1f0a5b5cf259e91c5510be7e9c1a50b4ca66c8ce01c46c88ef3c845f047b2bae
+  Status Code: 404
+  Response Time: 0.603 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2544.414 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2352.135 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2361.969 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2441.651 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2330.262 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2371.730 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2282.661 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2362.537 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2467.058 ms
+GET /reset-password?token=5fa7c1aa1eb6fe446d13909c312beb5940c5b0f836a3f513b64f7cfe45771845
+  Status Code: 404
+  Response Time: 7.182 ms
+GET /reset-password
+  Status Code: 404
+  Response Time: 0.757 ms
+GET /reset-password/index.html
+  Status Code: 404
+  Response Time: 1.444 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 23.585 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 6.428 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 4.184 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 2.986 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 24.591 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 22.117 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 14.131 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 42.786 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2316.226 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 26.895 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 48.643 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 175.870 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2334.175 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 20.573 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 8.646 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 1933.525 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 17.852 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 8.113 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 13.544 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 3.833 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 35.021 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 35.239 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 14.671 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2244.219 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 2.851 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 10.242 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 55.614 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 13.660 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 29.282 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 15.025 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 27.845 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 34.665 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2365.470 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 15.205 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 29.411 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2326.266 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 11.680 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 13.973 ms
+POST /api/auth/register
+  Status Code: 400
+  Response Time: 40.577 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 158.363 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 131.632 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2296.859 ms
+POST /api/auth/verifyOTP
+  Status Code: 500
+  Response Time: 5.081 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 52.337 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 34.548 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 30.931 ms
+POST /api/auth/sendOTP
+  Status Code: 404
+  Response Time: 9.943 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 500
+  Response Time: 4.705 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 400
+  Response Time: 4.231 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 400
+  Response Time: 4.804 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 400
+  Response Time: 4.840 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 400
+  Response Time: 5.847 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 145.510 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 93.665 ms
+POST /api/auth/login
+  Status Code: 401
+  Response Time: 91.530 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 108.721 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 204
+  Response Time: 97.866 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2398.218 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 67.888 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 28.655 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 403
+  Response Time: 26.412 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 403
+  Response Time: 10.533 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 7.936 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 403
+  Response Time: 9.571 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 403
+  Response Time: 6.420 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 403
+  Response Time: 39.603 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 141.586 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 204
+  Response Time: 136.817 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2432.818 ms
+POST /api/auth/register
+  Status Code: 500
+  Response Time: 100.583 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2390.038 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2148.367 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 37.684 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 36.262 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2398.456 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2071.111 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 30.380 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 104.877 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2007.766 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 19.722 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 3.830 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 2.829 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 17.020 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 14.867 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 35.524 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 28.764 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2090.738 ms
+POST /api/auth/resetPassword
+  Status Code: 500
+  Response Time: 27.384 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 139.117 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 22.971 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 1983.947 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 125.838 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2001.644 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 96.413 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 2223.225 ms
+POST /api/auth/resetPassword
+  Status Code: 400
+  Response Time: 134.004 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 206.887 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 45.788 ms
+PATCH /api/auth/changePassword
+  Status Code: 500
+  Response Time: 15.899 ms
+PATCH /api/auth/changePassword
+  Status Code: 401
+  Response Time: 9.331 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 34.024 ms
+PATCH /api/auth/changePassword
+  Status Code: 401
+  Response Time: 1.938 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 16.838 ms
+PATCH /api/auth/changePassword
+  Status Code: 404
+  Response Time: 8.816 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 117.705 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 89.478 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 90.151 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 88.554 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 92.700 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 232.076 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 93.754 ms
+PATCH /api/auth/changePassword
+  Status Code: 400
+  Response Time: 4.807 ms
+PATCH /api/auth/changePassword
+  Status Code: 400
+  Response Time: 3.650 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 181.462 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 186.177 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 107.525 ms
+DELETE /api/auth/logout
+  Status Code: 204
+  Response Time: 1.130 ms
+GET /api/auth/refreshToken
+  Status Code: 500
+  Response Time: 3.921 ms
+GET /api/auth/refreshToken
+  Status Code: 401
+  Response Time: 15.107 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 132.446 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 30.009 ms
+POST /api/auth/sendOTP
+  Status Code: 404
+  Response Time: 11.000 ms
+POST /api/auth/verifyOTP
+  Status Code: 400
+  Response Time: 4.574 ms
+DELETE /api/auth/logoutAll
+  Status Code: 204
+  Response Time: 9.680 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 95.050 ms
+DELETE /api/auth/deleteAccount?email=mohamedbadran1492008@gmail.com&password=x!MBad!x14
+  Status Code: 204
+  Response Time: 106.276 ms
+POST /api/auth/register
+  Status Code: 201
+  Response Time: 2293.451 ms
+POST /api/auth/verifyOTP
+  Status Code: 200
+  Response Time: 19.288 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 97.174 ms
+POST /api/auth/resetPassword
+  Status Code: 403
+  Response Time: 3.987 ms
+DELETE /api/auth/logoutAll
+  Status Code: 204
+  Response Time: 5.096 ms
+POST /api/auth/forgotPassword
+  Status Code: 200
+  Response Time: 1928.574 ms
+POST /api/auth/resetPassword
+  Status Code: 204
+  Response Time: 198.683 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 93.943 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 168.797 ms
+POST /api/auth/login
+  Status Code: 200
+  Response Time: 202.011 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 29.890 ms
+PATCH /api/auth/changePassword
+  Status Code: 403
+  Response Time: 99.541 ms
+PATCH /api/auth/changePassword
+  Status Code: 400
+  Response Time: 3.203 ms
+PATCH /api/auth/changePassword
+  Status Code: 400
+  Response Time: 2.896 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 182.868 ms
+PATCH /api/auth/changePassword
+  Status Code: 204
+  Response Time: 172.104 ms
+PATCH /api/auth/changePassword
+  Status Code: 401
+  Response Time: 14.085 ms
+GET /api/user/profile
+  Status Code: 400
+  Response Time: 0.942 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 41.442 ms
+GET /api/user/profile
+  Status Code: 400
+  Response Time: 0.765 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 10.516 ms
+GET /api/auth/refreshToken
+  Status Code: 200
+  Response Time: 12.295 ms
+GET /api/user/profile
+  Status Code: 200
+  Response Time: 6.663 ms
+GET /api/user/profile
+  Status Code: 200
+  Response Time: 37.903 ms
+GET /api/user/profile
+  Status Code: 200
+  Response Time: 38.776 ms

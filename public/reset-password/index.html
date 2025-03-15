@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badraan</title>
+</head>
+
+<body>
+  <form id="changePasswordForm">
+    <input type="password" id="password" placeholder="New Password">
+    <input type="password" id="newPassword" placeholder="Confirm New Password">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    const result = document.getElementById('result');
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const resetToken = urlParams.get('token');
+
+    const changePassword = (email, resetToken, password, then = (res) => { }) => {
+      fetch('/api/auth/resetPassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          resetToken,
+          password,
+        }),
+      }).then(then);
+    };
+
+    document.getElementById('changePasswordForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      const newPassword = document.getElementById('newPassword').value;
+      if (password !== newPassword) {
+        console.log("Passwords do not match");
+        result.innerText = 'Passwords do not match';
+        return;
+      }
+      changePassword(email, resetToken, password, async (res) => {
+        if (res.status !== 204) {
+          const data = await res.json();
+          result.innerHTML = data.message || data.errors.map(err => `<div>${"Field: " + err.field + "<br>Error: " + err.message}</div>`);
+          return;
+        }
+        result.innerText = "Changed successfully";
+      });
+    })
+
+  </script>
+</body>
+
+</html>
