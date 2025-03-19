@@ -1,13 +1,28 @@
+import { config } from 'dotenv';
+config();
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
+let transporterOptions = {
   host: process.env.SMTP_HOST,
   port: process.env.SMTP_PORT,
-  // secure: false, // true for port 465, fsalse for other ports
-  auth: {
+  secure: false,
+};
+
+if (process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
+  transporterOptions.auth = {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASSWORD,
-  },
+  };
+}
+
+const transporter = nodemailer.createTransport(transporterOptions);
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("SMTP Connection Error:", error);
+  } else {
+    console.log("✅ SMTP Server is ready!");
+  }
 });
 
 const sendOTPEmail = async (email, otp) => {

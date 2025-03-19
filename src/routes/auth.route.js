@@ -18,7 +18,6 @@ import {
 import {
   registerValidator,
   loginValidator,
-  logoutAllValidator,
   deleteAccountValidator,
   sendOTPValidator,
   verifyOTPValidator,
@@ -29,6 +28,7 @@ import {
 } from "../validators/auth.validator.js";
 
 import { authenticatedUser } from '../middlewares/auth.middleware.js';
+import { changeName, getProfile } from '../controllers/user.controller.js';
 
 // Register new user
 // Body: email, password, name
@@ -43,7 +43,7 @@ router.post("/login", loginValidator, login);
 router.delete("/logout", logout);
 
 // Logout all devices (Remove refresh token from database)
-router.delete("/logoutAll", authenticatedUser, logoutAllValidator, logoutAll);
+router.delete("/logoutAll", authenticatedUser, logoutAll);
 
 // Get Access Token
 // Cookie: refreshToken
@@ -73,10 +73,10 @@ router.post("/resetPassword", resetPasswordValidator, resetPassword);
 // Body: email, oldPassword, newPassword
 router.patch("/changePassword", authenticatedUser, changePasswordValidator, changePassword);
 
-// ! Not here
-// Get User's Profile
-// Authorization: Bearer <access_token>
-// GET /me
-
+// * Profile
+// /api/auth/profile           # GET - Get user profile
+router.get('/profile', authenticatedUser, getProfile);
+// /api/auth/updateProfile     # PATCH - Update name
+router.patch('/changeName', authenticatedUser, changeName);
 
 export default router;

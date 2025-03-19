@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import crypto from "crypto";
 import User from "../models/user.model.js";
-import PendingUser from "../models/PendingUser.model.js";
+import PendingUser from "../models/pendingUser.model.js";
 import { createRefreshToken, createAccessToken, verifyRefreshToken } from "../utils/tokens.js";
 import { sendOTPEmail, sendResetPasswordEmail } from "../utils/sendEmail.js";
 import { delay, updateAverage } from "../utils/timingAttackUtils.js";
@@ -11,22 +11,17 @@ const register = async (req, res, next) => {
     const { email, password, name } = req.body;
     // If email exists return 400
     if (await User.findOne({ email })) {
-      return res.status(400).json({ error: "Email already exists" });
+      return res.status(400).json({ error: "If this email is not registered, a confirmation will be sent." });
     }
-
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
 
     // Generate and send OTP
     const otp = crypto.randomInt(100000, 999999).toString(); // Generate 6-digit OTP
     const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 mins
-    // ! The database can have a slightly different value for createdAt
     const pendingUser = await PendingUser.findOne({ email });
     // If pending user already exists, update their data instead of creating a new pending user
     if (pendingUser) {
       pendingUser.email = email;
-      pendingUser.password = hashedPassword;
+      pendingUser.password = password;
       pendingUser.name = name;
       pendingUser.otp = otp;
       pendingUser.otpExpires = otpExpires;
@@ -35,29 +30,15 @@ const register = async (req, res, next) => {
       // Send OTP to user's email
       await sendOTPEmail(pendingUser.email, otp);
 
-      return res.status(201).json({ message: "User created successfully (Pending). Verify your email." });
+      return res.status(201).json({ message: "If this email is not registered, a confirmation will be sent." });
     }
     // Create a new PENDING user
-    const user = await PendingUser.create({ email, password: hashedPassword, name, otp, otpExpires });
+    const user = await PendingUser.create({ email, password: password, name, otp, otpExpires });
 
     // Send OTP to user's email
     await sendOTPEmail(user.email, otp);
 
-    return res.status(201).json({ message: "User created successfully (Pending). Verify your email." });
-
-    // Create new user
-    // const user = await User.create({ email, password: hashedPassword, name });
-
-    // Sign refresh, and access tokens
-    // const refreshToken = await createRefreshToken(user._id);
-    // const accessToken = createAccessToken(user._id, user.role);
-    // Send refresh token as a cookie and access token as a response
-    // return res.status(201).cookie("refreshToken", refreshToken, {
-    //   httpOnly: true,
-    //   // sameSite: "strict",
-    //   secure: process.env.NODE_ENV === "production",
-    //   maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    // }).json({ accessToken });
+    return res.status(201).json({ message: "If this email is not registered, a confirmation will be sent." });
   } catch (error) {
     next(error);
   }
@@ -164,9 +145,9 @@ const sendOTP = async (req, res, next) => {
 
     const user = await PendingUser.findOne({ email });
 
-    // If user not found return 404
+    // If user not found return 400 instead of 404 to prevent the attacker from knowing if the user exists
     if (!user) {
-      return res.status(404).json({ error: "User either not found or already registered" });
+      return res.status(400).json({ error: "User either not found or already registered" });
     }
     let otp = user.otp;
     // If OTP has expired Generate a new OTP
@@ -292,10 +273,8 @@ const resetPassword = async (req, res, next) => {
     // Compare passwords. If old password and new password are the same, return an error
     if (await bcrypt.compare(password, user.password)) return res.status(400).json({ message: 'Do not use the old password' });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     // Change the password and save
-    user.password = hashedPassword;
+    user.password = password;
     user.resetToken = '';
     user.resetTokenExpires = '';
     await user.save();
@@ -305,8 +284,6 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
-
-// TODO: Complete changePassword endpoint and remove email since the user will be identified using access token
 const changePassword = async (req, res, next) => {
   try {
     const { oldPassword, newPassword } = req.body;
@@ -318,9 +295,7 @@ const changePassword = async (req, res, next) => {
 
     if (!(await bcrypt.compare(oldPassword, user.password))) return res.status(403).json({ message: "Old Password is incorrect" });
 
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
-
-    user.password = hashedPassword;
+    user.password = password;
     user.save();
 
     return res.sendStatus(204);

@@ -15,10 +15,10 @@ const loginValidator = [
   validate,
 ];
 
-const logoutAllValidator = [
-  cookie("refreshToken").notEmpty().withMessage("Refresh token is required"),
-  validate,
-];
+// const logoutAllValidator = [
+//   cookie("refreshToken").notEmpty().withMessage("Refresh token is required"),
+//   validate,
+// ];
 
 const deleteAccountValidator = [
   query("email").notEmpty().withMessage("Email is required").isEmail().withMessage("Invalid email format"),
@@ -62,7 +62,7 @@ const refreshTokenValidator = [
 export {
   registerValidator,
   loginValidator,
-  logoutAllValidator,
+  // logoutAllValidator,
   deleteAccountValidator,
   sendOTPValidator,
   verifyOTPValidator,

@@ -17,7 +17,7 @@ const validateAuthorization = (req, res) => {
 };
 
 // Authenticated User Middleware
-const authenticatedUser = (req, res, next) => {
+export const authenticatedUser = (req, res, next) => {
   try {
     const decoded = validateAuthorization(req, res);
     if (res.headersSent) return;
@@ -28,6 +28,15 @@ const authenticatedUser = (req, res, next) => {
   }
 };
 
-export {
-  authenticatedUser,
+// Authenticated Admin Middleware
+export const authenticatedAdmin = (req, res, next) => {
+  try {
+    const decoded = validateAuthorization(req, res);
+    if (res.headersSent) return;
+    if (decoded.role !== "admin") return res.status(403).json({ error: "You are not an admin" });
+    req.user = decoded;
+    next();
+  } catch (error) {
+    next(error);
+  }
 };

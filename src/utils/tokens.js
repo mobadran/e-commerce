@@ -13,7 +13,8 @@ const createRefreshToken = async (userId) => {
 
 const createAccessToken = (userId, role) => {
   const accessToken = jwt.sign({ userId, role }, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "15m",
+    expiresIn: "1d",
+    // ! Do not forget to change expiresIn to 15m when in production
   });
   return accessToken;
 };
@@ -33,7 +34,6 @@ const verifyRefreshToken = (token) => {
         if (!user || user.refreshToken !== token) {
           return resolve(false);
         }
-        console.log("Decoded.userId:", decoded.userId);
         resolve(decoded.userId);
       } catch (error) {
         reject(error);

@@ -1,15 +1,15 @@
 // Load environment variables
 import dotenv from "dotenv";
-
 dotenv.config();
 
 import express from "express";
 const app = express();
 
 import cors from "cors";
-import morgan from "morgan";
+// ! Stop using morgan in development
+// import morgan from "morgan";
+// import fs from "fs";
 import cookieParser from 'cookie-parser';
-import fs from "fs";
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -23,6 +23,8 @@ connectDB();
 // Routes
 import authRoutes from "./routes/auth.route.js";
 import userRoutes from "./routes/user.route.js";
+import productsRoutes from "./routes/products.route.js";
+import adminRoutes from "./routes/admin.route.js";
 
 
 // Middleware
@@ -33,14 +35,16 @@ app.use(cookieParser());
 // Serve static files from the 'public' folder
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-// Morgan (Log HTTP requests)
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
-app.use(morgan(":method :url\n  Status Code: :status\n  Response Time: :response-time ms", { stream: accessLogStream })); // Log requests
+// ! Stop using morgan in development
+// const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+// app.use(morgan(":method :url\n  Status Code: :status\n  Response Time: :response-time ms\n  Time: :date[clf]\n", { stream: accessLogStream })); // Log requests
 
 
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/products", productsRoutes);
+app.use("/api/admin", adminRoutes);
 
 
 // 404 Not Found middleware
@@ -56,5 +60,5 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`✅ Server is running on port ${PORT}`);
 });
