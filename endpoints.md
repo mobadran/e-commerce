@@ -63,9 +63,9 @@
 ## 5. Reviews & Ratings
 
 ```
-/api/products/:id/review                # POST - Add review
+/api/products/:id/review                # POST - Post review
 /api/products/:id/reviews               # GET - Get all reviews for a product
-/api/products/:id/review/:reviewId      # DELETE - Delete review (User/Admin)
+/api/products/review/:reviewId          # DELETE - Delete review (User/Admin)
 ```
 
 ## 6. Admin Dashboard (Protected Routes)

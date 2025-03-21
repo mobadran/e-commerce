@@ -3,12 +3,12 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
   name: { type: String, required: [true, "Please provide a name"], },
-  email: { type: String, required: [true, "Please provide an email"], unique: true, },
-  password: { type: String, required: [true, "Please provide a password"], },
+  email: { type: String, required: [true, "Please provide an email"], unique: true, select: false },
+  password: { type: String, required: [true, "Please provide a password"], select: false },
   role: { type: String, enum: ["user", "admin"], default: "user", },
-  refreshToken: { type: String, default: null, },
-  resetToken: { type: String, default: null, },
-  resetTokenExpires: { type: Date, default: null, },
+  refreshToken: { type: String, default: null, select: false },
+  resetToken: { type: String, default: null, select: false },
+  resetTokenExpires: { type: Date, default: null, select: false },
   cart: [
     {
       product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },

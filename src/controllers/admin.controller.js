@@ -1,15 +1,28 @@
 import Product from '../models/product.model.js';
 import Order from '../models/order.model.js';
+import cloudinary from '../config/cloudinary.js';
 
 export const createProduct = async (req, res, next) => {
   try {
     const { name, price, description, category } = req.body;
+
+    const result = await new Promise((resolve, reject) => {
+      cloudinary.uploader.upload_stream((error, result) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
+      }).end(req.file.buffer);
+    });
+
     const product = await Product.create({
       name,
       price,
       description,
       category,
-      createdBy: req.user.userId
+      image: result.secure_url,
+      createdBy: req.user.userId,
     });
 
     return res.status(201).json(product);

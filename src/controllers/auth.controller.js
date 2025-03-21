@@ -48,7 +48,7 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+password");
     // If email is incorrect return 401
     if (!user) {
       // Simulate a password check to prevent timing attacks
@@ -85,7 +85,7 @@ const refreshToken = async (req, res, next) => {
       return res.status(401).json({ message: "Refresh token is required" });
     }
 
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).select("+refreshToken");
     if (!user || user.refreshToken !== req.cookies.refreshToken) {
       return res.status(403).json({ error: "Refresh Token Invalid" });
     }
@@ -123,9 +123,8 @@ const deleteAccount = async (req, res, next) => {
   try {
     const { email, password } = req.query;
     const userId = req.user.userId;
-    console.log(userId);
 
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).select("+password +email");
     if (!user || user.email !== email || !(await bcrypt.compare(password, user.password))) {
       return res.status(403).json({ error: "Invalid access token, email, password, or user deleted" });
     }
@@ -173,11 +172,6 @@ const verifyOTP = async (req, res, next) => {
   try {
     const { email, otp } = req.body;
     const user = await PendingUser.findOne({ email });
-    console.log(`
-      User: ${user}
-      OTP: ${otp}
-      `);
-
 
     if (!user || user.otp !== otp || user.otpExpires < new Date()) {
       return res.status(400).json({ error: "User not found OR User already registered OR Invalid OTP" });
@@ -215,7 +209,7 @@ const forgotPassword = async (req, res, next) => {
   try {
     const { email } = req.body;
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+resetToken +resetTokenExpires +email");
 
     if (!user) {
       // Simulate user.save() and sendResetPasswordEmail() to prevent timing attacks
@@ -236,14 +230,12 @@ const forgotPassword = async (req, res, next) => {
     await user.save();
     const saveEnd = performance.now();
     avgUserSaveTime = updateAverage(avgUserSaveTime, saveEnd - saveStart);
-    console.log("Updated avgUserSaveTime:", avgUserSaveTime);
 
     // Measure sendResetPasswordEmail() execution time
     const sendStart = performance.now();
     await sendResetPasswordEmail(user.email, resetToken);
     const sendEnd = performance.now();
     avgSendEmailTime = updateAverage(avgSendEmailTime, sendEnd - sendStart);
-    console.log("Updated avgSendEmailTime:", avgSendEmailTime);
 
     return res.status(200).json({ message: "Reset password link sent to your email if your email is in our database" });
   } catch (error) {
@@ -254,7 +246,7 @@ const forgotPassword = async (req, res, next) => {
 const resetPassword = async (req, res, next) => {
   try {
     const { email, resetToken, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+resetToken +resetTokenExpires +password");
 
     // If user not found in db, return 404
     if (!user) {
@@ -290,7 +282,7 @@ const changePassword = async (req, res, next) => {
     if (oldPassword === newPassword) return res.status(400).json({ message: "Why would you do that?" });
 
     const userId = req.user.userId;
-    const user = await User.findOne({ _id: userId });
+    const user = await User.findOne({ _id: userId }).select("+password");
     if (!user) return res.status(404).json({ message: "User Not Found" });
 
     if (!(await bcrypt.compare(oldPassword, user.password))) return res.status(403).json({ message: "Old Password is incorrect" });

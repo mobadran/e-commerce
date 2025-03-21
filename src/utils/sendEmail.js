@@ -1,6 +1,7 @@
 import { config } from 'dotenv';
 config();
 import nodemailer from "nodemailer";
+import colorize from './colorize.js';
 
 let transporterOptions = {
   host: process.env.SMTP_HOST,
@@ -21,7 +22,7 @@ transporter.verify((error, success) => {
   if (error) {
     console.error("SMTP Connection Error:", error);
   } else {
-    console.log("✅ SMTP Server is ready!");
+    console.log(`✅ SMTP Ready: ${colorize(`${transporterOptions.host}:${transporterOptions.port}`, 'blue')}`);
   }
 });
 
@@ -76,7 +77,7 @@ const sendOTPEmail = async (email, otp) => {
     `, // html body
   });
 
-  console.log("Message sent:", info.messageId);
+  // console.log("📩 Message sent:", info.messageId);
   // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
 };
 
@@ -131,7 +132,7 @@ const sendResetPasswordEmail = async (email, resetToken) => {
     </div>
   `});
 
-  console.log("📩 Message sent: %s", info.messageId);
+  // console.log("📩 Message sent:", info.messageId);
   // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
 };
 

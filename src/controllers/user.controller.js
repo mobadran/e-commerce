@@ -202,13 +202,10 @@ export const addToCart = async (req, res, next) => {
       { $set: { "cart.$.quantity": quantity } }, // Update quantity of product in cart
       { new: true, select: "cart" } // Return updated document with only cart
     );
-    console.log("Result if product is already in cart", result);
-
 
     // If product is not in cart, add it to cart
     if (!result) {
       result = await User.findOneAndUpdate({ _id: req.user.userId }, { $push: { cart: { product, quantity } } }, { new: true, select: "cart" });
-      console.log("Result if product is not in cart", result);
     }
 
     return res.status(200).json({ cart: result.cart });

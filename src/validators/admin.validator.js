@@ -6,6 +6,7 @@ export const createProductValidator = [
   body("price").isFloat().withMessage("Price must be a number"),
   body("description").notEmpty().withMessage("Description is required"),
   body("category").notEmpty().withMessage("Category is required"),
+  // body("image").notEmpty().withMessage("Image is required"),
   validate,
 ];
 
